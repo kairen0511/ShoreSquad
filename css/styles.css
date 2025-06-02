@@ -46,11 +46,87 @@ footer {
     bottom: 0;
 }
 
+.primary-btn {
+    background: #0077b6;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.2s;
+}
+.primary-btn:hover, .primary-btn:focus {
+    background: #43aa8b;
+    outline: 2px solid #ffe066;
+}
+.secondary-btn {
+    background: #ffe066;
+    color: #22223b;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    transition: background 0.2s;
+}
+.secondary-btn:hover, .secondary-btn:focus {
+    background: #ff6f3c;
+    color: #fff;
+    outline: 2px solid #0077b6;
+}
+#map-container {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, #0077b6 60%, #ffe066 100%);
+    border-radius: 0.75rem;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+#weather-info {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    color: #0077b6;
+}
+#crew-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+#crew-list li {
+    background: #e0f7fa;
+    color: #22223b;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#crew-name {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #0077b6;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
 @media (max-width: 600px) {
     main {
         padding: 1rem 0.5rem;
     }
     section {
         padding: 1rem;
+    }
+    #map-container {
+        height: 150px;
+        font-size: 1rem;
     }
 }

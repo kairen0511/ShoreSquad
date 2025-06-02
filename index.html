@@ -12,9 +12,22 @@
         <p>Rally your crew, track weather, and hit the next beach cleanup with our dope map app!</p>
     </header>
     <main>
-        <section id="map"></section>
-        <section id="weather"></section>
-        <section id="crew"></section>
+        <section id="map">
+            <h2>Beach Cleanup Map</h2>
+            <div id="map-container" aria-label="Map showing beach cleanups"></div>
+            <button id="add-cleanup" class="primary-btn">Add Cleanup Event</button>
+        </section>
+        <section id="weather">
+            <h2>Weather Tracker</h2>
+            <div id="weather-info" aria-live="polite"></div>
+            <button id="refresh-weather" class="secondary-btn">Refresh Weather</button>
+        </section>
+        <section id="crew">
+            <h2>Your Crew</h2>
+            <ul id="crew-list" aria-label="Your cleanup crew"></ul>
+            <input id="crew-name" type="text" placeholder="Add crew member" aria-label="Add crew member">
+            <button id="add-crew" class="primary-btn">Add</button>
+        </section>
     </main>
     <footer>
         <p>&copy; 2025 ShoreSquad. All rights reserved.</p>
