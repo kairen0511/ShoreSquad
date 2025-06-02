@@ -21,7 +21,6 @@ header {
     padding: 2.5rem 1rem 1.5rem 1rem;
     text-align: center;
     box-shadow: 0 4px 16px rgba(0, 119, 182, 0.08);
-    margin-top: 0.5rem;
 }
 
 main {
@@ -31,7 +30,6 @@ main {
     gap: 2.2rem;
     max-width: 900px;
     margin: 0 auto;
-    padding-top: 0.5rem;
 }
 
 section {
@@ -264,69 +262,36 @@ footer {
     }
 }
 
-.weather-forecast {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin: 1.2rem 0 1.5rem 0;
-    flex-wrap: wrap;
-}
-.forecast-card {
-    background: #fff;
-    border: 2px solid #e0f7fa;
-    border-radius: 1rem;
-    box-shadow: 0 2px 8px rgba(0,119,182,0.07);
-    padding: 1rem 1.1rem 0.8rem 1.1rem;
-    min-width: 110px;
-    max-width: 120px;
-    text-align: center;
-    margin-bottom: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: box-shadow 0.18s, border-color 0.18s, transform 0.18s;
-}
-.forecast-card:hover {
-    border-color: #43aa8b;
-    box-shadow: 0 4px 16px #43aa8b33;
-    transform: translateY(-2px) scale(1.03);
-}
-.forecast-day {
-    font-weight: 700;
-    color: #0077b6;
-    font-size: 1.1em;
-    margin-bottom: 0.2em;
-}
-.forecast-icon {
-    font-size: 1.7em;
-    margin-bottom: 0.15em;
-}
-.forecast-temp {
-    color: #22223b;
-    font-size: 1em;
-    font-weight: 500;
-}
-
-@media (max-width: 900px) {
-    .weather-forecast {
-        gap: 0.5rem;
-    }
-    .forecast-card {
-        min-width: 90px;
-        max-width: 100px;
-        padding: 0.7rem 0.5rem 0.6rem 0.5rem;
-    }
-}
 @media (max-width: 600px) {
-    .weather-forecast {
-        flex-wrap: wrap;
-        gap: 0.4rem;
-        justify-content: flex-start;
+    main {
+        padding: 1rem 0.2rem;
     }
-    .forecast-card {
-        min-width: 44vw;
-        max-width: 48vw;
+    section {
+        padding: 1rem 0.5rem;
+    }
+    .weather-cards {
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+    .weather-card, .weather-error-card {
+        min-width: 90vw;
+        max-width: 98vw;
         font-size: 0.98rem;
-        padding: 0.6rem 0.2rem 0.5rem 0.2rem;
+    }
+    #map-container iframe {
+        height: 120px !important;
+    }
+    #impact {
+        padding: 1rem 0.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    #impact-list li {
+        font-size: 0.98rem;
+        padding: 0.5rem 0.7rem;
+    }
+    #crew-list li {
+        font-size: 0.98rem;
+        padding: 0.5rem 0.7rem;
     }
 }
