@@ -1,0 +1,56 @@
+/* ShoreSquad Colour Palette
+   - Ocean Blue: #0077b6
+   - Sand Yellow: #ffe066
+   - Coral Orange: #ff6f3c
+   - Seafoam Green: #43aa8b
+   - White: #ffffff
+   - Charcoal: #22223b
+*/
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f5faff;
+    color: #22223b;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(90deg, #0077b6 60%, #43aa8b 100%);
+    color: #fff;
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1.5rem;
+}
+
+footer {
+    background: #22223b;
+    color: #ffe066;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 1rem 0.5rem;
+    }
+    section {
+        padding: 1rem;
+    }
+}
