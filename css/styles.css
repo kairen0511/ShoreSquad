@@ -21,6 +21,7 @@ header {
     padding: 2.5rem 1rem 1.5rem 1rem;
     text-align: center;
     box-shadow: 0 4px 16px rgba(0, 119, 182, 0.08);
+    margin-top: 0.5rem;
 }
 
 main {
@@ -30,6 +31,7 @@ main {
     gap: 2.2rem;
     max-width: 900px;
     margin: 0 auto;
+    padding-top: 0.5rem;
 }
 
 section {
@@ -186,36 +188,145 @@ footer {
     box-shadow: 0 -2px 12px #181a2a33;
 }
 
-@media (max-width: 600px) {
-    main {
-        padding: 1rem 0.2rem;
-    }
-    section {
-        padding: 1rem 0.5rem;
-    }
-    .weather-cards {
+/* Navbar styles */
+.navbar {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,119,182,0.07);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 2.5vw 0.7rem 2.5vw;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-logo {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: #0077b6;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+.nav-logo:hover {
+    color: #43aa8b;
+}
+.nav-tabs {
+    display: flex;
+    gap: 0.7rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-tab {
+    display: inline-block;
+    padding: 0.45em 1.2em;
+    border-radius: 2em;
+    background: #e0f7fa;
+    color: #0077b6;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s, border 0.18s;
+    border: 2px solid transparent;
+    box-shadow: 0 1px 4px rgba(0,119,182,0.04);
+    position: relative;
+}
+.nav-tab:hover, .nav-tab:focus {
+    background: #ffe066;
+    color: #22223b;
+    border: 2px solid #43aa8b;
+    box-shadow: 0 2px 8px #ffe06655;
+}
+.nav-tab.active, .nav-tab[aria-current="page"] {
+    background: linear-gradient(90deg, #0077b6 80%, #43aa8b 100%);
+    color: #fff;
+    border: 2px solid #43aa8b;
+    box-shadow: 0 2px 8px #43aa8b33;
+}
+@media (max-width: 700px) {
+    .navbar {
         flex-direction: column;
-        gap: 0.7rem;
+        align-items: flex-start;
+        padding: 0.5rem 1vw;
     }
-    .weather-card, .weather-error-card {
-        min-width: 90vw;
-        max-width: 98vw;
+    .nav-logo {
+        font-size: 1.2rem;
+        margin-bottom: 0.3rem;
+    }
+    .nav-tabs {
+        gap: 0.3rem;
+    }
+    .nav-tab {
         font-size: 0.98rem;
+        padding: 0.35em 0.8em;
     }
-    #map-container iframe {
-        height: 120px !important;
+}
+
+.weather-forecast {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1.2rem 0 1.5rem 0;
+    flex-wrap: wrap;
+}
+.forecast-card {
+    background: #fff;
+    border: 2px solid #e0f7fa;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0,119,182,0.07);
+    padding: 1rem 1.1rem 0.8rem 1.1rem;
+    min-width: 110px;
+    max-width: 120px;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.18s, border-color 0.18s, transform 0.18s;
+}
+.forecast-card:hover {
+    border-color: #43aa8b;
+    box-shadow: 0 4px 16px #43aa8b33;
+    transform: translateY(-2px) scale(1.03);
+}
+.forecast-day {
+    font-weight: 700;
+    color: #0077b6;
+    font-size: 1.1em;
+    margin-bottom: 0.2em;
+}
+.forecast-icon {
+    font-size: 1.7em;
+    margin-bottom: 0.15em;
+}
+.forecast-temp {
+    color: #22223b;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+@media (max-width: 900px) {
+    .weather-forecast {
+        gap: 0.5rem;
     }
-    #impact {
-        padding: 1rem 0.5rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+    .forecast-card {
+        min-width: 90px;
+        max-width: 100px;
+        padding: 0.7rem 0.5rem 0.6rem 0.5rem;
     }
-    #impact-list li {
+}
+@media (max-width: 600px) {
+    .weather-forecast {
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        justify-content: flex-start;
+    }
+    .forecast-card {
+        min-width: 44vw;
+        max-width: 48vw;
         font-size: 0.98rem;
-        padding: 0.5rem 0.7rem;
-    }
-    #crew-list li {
-        font-size: 0.98rem;
-        padding: 0.5rem 0.7rem;
+        padding: 0.6rem 0.2rem 0.5rem 0.2rem;
     }
 }
