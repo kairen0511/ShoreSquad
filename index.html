@@ -14,18 +14,19 @@
     <main>
         <section id="map">
             <h2>Beach Cleanup Map</h2>
-            <div id="map-container" aria-label="Map showing beach cleanups">
+            <div id="map-container" aria-label="Map showing beach cleanups" style="position:relative; width:100%; max-width:100%;">
                 <iframe
                     title="Next Cleanup Location: Pasir Ris"
                     width="100%"
-                    height="250"
-                    style="border:0; border-radius: 0.75rem;"
+                    height="300"
+                    style="border:0; border-radius: 0.75rem; min-width:200px; min-height:200px; max-width:100%;"
                     loading="lazy"
                     allowfullscreen
                     referrerpolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.96401383613!2d103.955574!3d1.381497!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMjInNTMuNCJOIDEwM8KwNTcnMjAuMCJF!3m2!1d1.381497!2d103.955574!4m5!3m4!1s0x0:0x0!8m2!3d1.381497!4d103.955574!5e0!3m2!1sen!2ssg!4v1717320000000!5m2!1sen!2ssg">
+                    src="https://www.google.com/maps?q=1.381497,103.955574&hl=en&z=17&output=embed&markers=1.381497,103.955574">
                 </iframe>
-                <div style="margin-top:0.5rem; color:#0077b6; font-weight:600;">Next Cleanup: Pasir Ris (Street View Asia)</div>
+                <div style="position:absolute;top:10px;left:10px;background:rgba(255,255,255,0.9);color:#0077b6;padding:0.3em 0.8em;border-radius:0.5em;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,0.07);font-size:1em;">📍 Next Cleanup</div>
+                <div style="margin-top:0.5rem; color:#0077b6; font-weight:600;">Pasir Ris (Street View Asia)</div>
             </div>
             <button id="add-cleanup" class="primary-btn">Add Cleanup Event</button>
         </section>
@@ -40,10 +41,26 @@
             <input id="crew-name" type="text" placeholder="Add crew member" aria-label="Add crew member">
             <button id="add-crew" class="primary-btn">Add</button>
         </section>
+        <section id="impact">
+            <h2>Impact Tracker</h2>
+            <ul id="impact-list" aria-label="Impact statistics"></ul>
+        </section>
     </main>
     <footer>
         <p>&copy; 2025 ShoreSquad. All rights reserved.</p>
     </footer>
     <script src="js/app.js"></script>
+    <!-- Tawk.to Live Chat for user questions and cleanup coordination -->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/your_property_id/1hxxxxxxx'; // Replace with your Tawk.to property ID
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
 </body>
 </html>
